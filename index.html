@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総合学習教室ブリッジ｜彦根・稲枝の自立学習塾</title>
+<meta name="description" content="滋賀県彦根市稲枝の総合学習教室ブリッジ。世帯年額60万円上限の明朗会計と、自分で考える力を育てる自立学習メソッド。代表・田中力磨が伴走します。">
+<meta property="og:title" content="総合学習教室ブリッジ｜彦根・稲枝の自立学習塾">
+<meta property="og:description" content="現代の松下村塾を志す、彦根・稲枝の学習教室。世帯年額60万円上限。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --paper: #FAF8F4;
+    --paper-soft: #F2EDE3;
+    --navy: #1F3A5F;
+    --navy-deep: #142941;
+    --gold: #C9A24B;
+    --gold-soft: #E8D8A8;
+    --line: #D9D3C7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.85;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: 'Noto Serif JP', 'Yu Mincho', serif; }
+  .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    background: var(--navy-deep);
+    color: var(--paper);
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .logo {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+  .logo span { color: var(--gold); }
+  .header-cta {
+    background: var(--gold);
+    color: var(--navy-deep);
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: opacity 0.2s;
+  }
+  .header-cta:hover { opacity: 0.85; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, var(--paper-soft) 0%, var(--paper) 100%);
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: -40px;
+    width: 220px;
+    height: 220px;
+    border: 1px solid var(--gold-soft);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  .hero-eyebrow {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--navy-deep);
+    margin-bottom: 24px;
+  }
+  .hero h1 .accent { color: var(--gold); border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
+  .hero-lead {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    max-width: 620px;
+  }
+  .hero-meta {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--line);
+    padding: 8px 16px;
+    font-size: 13px;
+    color: var(--navy);
+    border-radius: 2px;
+  }
+
+  /* Section common */
+  section { padding: 72px 0; }
+  .section-label {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy-deep);
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+
+  /* Manifesto */
+  .manifesto { background: var(--paper-soft); }
+  .manifesto-quote {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy-deep);
+    line-height: 1.9;
+    padding: 32px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  .manifesto-quote::before { content: "「"; color: var(--gold); }
+  .manifesto-quote::after { content: "」"; color: var(--gold); }
+  .manifesto p { margin-bottom: 18px; color: var(--ink); }
+  .signature {
+    margin-top: 32px;
+    text-align: right;
+    font-family: 'Noto Serif JP', serif;
+    color: var(--navy);
+  }
+  .signature-name { font-size: 18px; font-weight: 700; }
+  .signature-title { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* Strengths */
+  .strengths { background: white; }
+  .strength-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .strength-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 32px 28px;
+    position: relative;
+  }
+  .strength-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .strength-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy-deep);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .strength-card p { font-size: 15px; color: var(--ink-soft); }
+
+  /* Price highlight */
+  .price-block {
+    background: var(--navy-deep);
+    color: var(--paper);
+    padding: 56px 0;
+    text-align: center;
+    position: relative;
+  }
+  .price-block::before, .price-block::after {
+    content: "";
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .price-block::before { top: 24px; }
+  .price-block::after { bottom: 24px; }
+  .price-eyebrow { font-size: 13px; color: var(--gold); letter-spacing: 0.25em; margin-bottom: 16px; }
+  .price-headline {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .price-num {
+    font-size: 56px;
+    color: var(--gold);
+    font-weight: 900;
+    margin: 0 4px;
+  }
+  .price-desc { margin-top: 20px; font-size: 15px; color: var(--gold-soft); }
+
+  /* Books */
+  .books-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .book-item {
+    border-left: 3px solid var(--gold);
+    padding: 8px 0 8px 20px;
+  }
+  .book-tag {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .book-title {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--navy-deep);
+    line-height: 1.5;
+  }
+
+  /* Voice */
+  .voice { background: var(--paper-soft); }
+  .voice-card {
+    background: white;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    border-radius: 2px;
+    border-left: 3px solid var(--gold);
+  }
+  .voice-text { font-size: 15px; line-height: 1.9; margin-bottom: 12px; }
+  .voice-author { font-size: 13px; color: var(--ink-soft); }
+
+  /* CTA */
+  .cta-block {
+    background: white;
+    padding: 56px 0;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .cta-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy-deep);
+    margin-bottom: 12px;
+  }
+  .cta-sub { color: var(--ink-soft); margin-bottom: 28px; }
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--navy-deep);
+    color: white;
+    border: 2px solid var(--navy-deep);
+  }
+  .btn-primary:hover { background: var(--gold); border-color: var(--gold); color: var(--navy-deep); }
+  .btn-secondary {
+    background: white;
+    color: var(--navy-deep);
+    border: 2px solid var(--navy-deep);
+  }
+  .btn-secondary:hover { background: var(--paper-soft); }
+
+  /* Access */
+  .access-info {
+    background: var(--paper);
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+  }
+  .access-row {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+    gap: 16px;
+  }
+  .access-row:last-child { border-bottom: none; }
+  .access-label {
+    flex: 0 0 110px;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 14px;
+  }
+  .access-value { font-size: 15px; color: var(--ink); }
+
+  /* Footer */
+  footer {
+    background: var(--navy-deep);
+    color: var(--paper);
+    padding: 32px 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--gold-soft);
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    body { font-size: 15px; }
+    .hero { padding: 56px 0 48px; }
+    .hero h1 { font-size: 26px; }
+    .hero-lead { font-size: 15px; }
+    section { padding: 56px 0; }
+    .section-title { font-size: 22px; margin-bottom: 28px; }
+    .manifesto-quote { font-size: 17px; padding: 24px 0; }
+    .strength-grid, .books-grid { grid-template-columns: 1fr; }
+    .price-headline { font-size: 22px; }
+    .price-num { font-size: 42px; }
+    .cta-title { font-size: 20px; }
+    .access-row { flex-direction: column; gap: 4px; }
+    .access-label { flex: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">総合学習教室<span>ブリッジ</span></div>
+    <a href="#contact" class="header-cta">無料学習相談</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">SHIGA / HIKONE / INAE</div>
+    <h1>
+      勉強ごっこを、<br>
+      やめるところから。<br>
+      <span class="accent">自分で考える力</span>を育てる学習教室。
+    </h1>
+    <p class="hero-lead">
+      滋賀県彦根市稲枝。<br>
+      点数を取らせるための塾ではなく、<br>
+      子ども自身が「どう考えるか」を学べる場所として運営しています。
+    </p>
+    <span class="hero-meta">代表・田中力磨／著書『10歳から伸ばす 国語「解答力」』ほか</span>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="container">
+    <div class="section-label">MANIFESTO</div>
+    <h2 class="section-title">机に座るだけでは、成績は絶対に上がらない。</h2>
+    <p class="manifesto-quote">
+      失敗で終わるから失敗になるんです。続けていけば、それは成功になる。
+    </p>
+    <p>こんにちは。ブリッジの田中です。</p>
+    <p>
+      私自身、高校時代はワーストレベルの劣等生でした。だからこそ、成績で悩む子の痛みは誰よりわかってるつもりです。
+    </p>
+    <p>
+      ブリッジで一番大事にしているのは、自学自習。先生に頼り切る「勉強ごっこ」じゃなくて、自分で問いを立てて、自分で解き直す力。これがないと、点数なんて一時的にしか上がらへんのです。
+    </p>
+    <p>
+      点数はゴールやなくて、手段。本当に育てたいのは、国語力・対応力・人間力。AIの時代でも生き残る子に、稲枝から育てていきたい。現代の松下村塾を、本気で目指しています。
+    </p>
+    <div class="signature">
+      <div class="signature-name">田中 力磨</div>
+      <div class="signature-title">総合学習教室ブリッジ 代表</div>
+    </div>
+  </div>
+</section>
+
+<section class="strengths">
+  <div class="container">
+    <div class="section-label">OUR STRENGTH</div>
+    <h2 class="section-title">ブリッジが選ばれる、4つの理由。</h2>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <div class="strength-num">― 01</div>
+        <div class="strength-title">世帯年額60万円上限の明朗会計</div>
+        <p>兄弟が何人いても、教科を増やしても、世帯あたり年間60万円が上限。「追加料金」で家計を圧迫しません。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">― 02</div>
+        <div class="strength-title">自立学習メソッド</div>
+        <p>解き直しの質、質問の質、学習密度。先生に依存せず「自分で考える力」を、毎日の指導で鍛えます。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">― 03</div>
+        <div class="strength-title">国語「解答力」を核にした指導</div>
+        <p>すべての教科の土台は国語力。著書でも体系化したメソッドで、読む力・考える力・書く力を底上げします。</p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">― 04</div>
+        <div class="strength-title">稲枝・彦根の地元密着</div>
+        <p>送り迎えの負担も、地域の風土も、よく理解しています。「現代の松下村塾」として、地元の子に伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="price-block">
+  <div class="container">
+    <div class="price-eyebrow">― FAIR PRICE ―</div>
+    <div class="price-headline">
+      世帯年額<span class="price-num">60</span>万円、上限。
+    </div>
+    <div class="price-desc">兄弟・教科数にかかわらず、追加料金は発生しません。</div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-label">PUBLISHED BOOKS</div>
+    <h2 class="section-title">代表・田中力磨の著書。</h2>
+    <div class="books-grid">
+      <div class="book-item">
+        <div class="book-tag">小学生の保護者向け</div>
+        <div class="book-title">10歳から伸ばす<br>国語「解答力」</div>
+      </div>
+      <div class="book-item">
+        <div class="book-tag">これからの教育を考える方へ</div>
+        <div class="book-title">AI時代を生き抜く<br>「国語力」がわかる本</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="container">
+    <div class="section-label">PARENT'S VOICE</div>
+    <h2 class="section-title">保護者の方からの声（一例）。</h2>
+    <div class="voice-card">
+      <p class="voice-text">「自分で計画を立てて勉強するようになった」のが一番の変化でした。点数より先に、姿勢が変わったのが嬉しかったです。</p>
+      <div class="voice-author">中学2年生・保護者様</div>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">兄弟で通わせても料金が上がらないのは本当に助かります。先生に「依存させない」という方針も納得できました。</p>
+      <div class="voice-author">小学5年・中学1年・保護者様</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block" id="contact">
+  <div class="container">
+    <h2 class="cta-title">まずは、話を聞きにきてください。</h2>
+    <p class="cta-sub">無料学習相談を随時受付中。お子さんの今の状態に合わせて、一緒に考えましょう。</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary">無料学習相談を申し込む</a>
+      <a href="#access" class="btn btn-secondary">教室の場所を見る</a>
+    </div>
+  </div>
+</div>
+
+<section id="access">
+  <div class="container">
+    <div class="section-label">ACCESS</div>
+    <h2 class="section-title">教室について。</h2>
+    <div class="access-info">
+      <div class="access-row">
+        <div class="access-label">教室名</div>
+        <div class="access-value">総合学習教室ブリッジ</div>
+      </div>
+      <div class="access-row">
+        <div class="access-label">所在地</div>
+        <div class="access-value">滋賀県彦根市 稲枝エリア</div>
+      </div>
+      <div class="access-row">
+        <div class="access-label">代表</div>
+        <div class="access-value">田中 力磨（たなか りきま）</div>
+      </div>
+      <div class="access-row">
+        <div class="access-label">対象</div>
+        <div class="access-value">小学生・中学生・高校生</div>
+      </div>
+      <div class="access-row">
+        <div class="access-label">受付</div>
+        <div class="access-value">無料学習相談・体験随時受付中</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    &copy; 総合学習教室ブリッジ ／ 滋賀・彦根・稲枝
+  </div>
+</footer>
+
+</body>
+</html>
